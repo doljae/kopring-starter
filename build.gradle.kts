@@ -6,6 +6,8 @@ plugins {
     kotlin("jvm")
     kotlin("plugin.spring")
     kotlin("plugin.jpa")
+
+    id("org.jlleitschuh.gradle.ktlint")
 }
 
 group = "com.doljae"
@@ -39,7 +41,6 @@ dependencies {
     implementation(Dependencies.testContainersMySql)
 
     implementation(Dependencies.mySqlConnector)
-
 }
 
 tasks.withType<KotlinCompile> {
