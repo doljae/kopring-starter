@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  db:
+    image: mysql:8.0.33
+    restart: unless-stopped
+    ports:
+      - "3307:3306"
+    environment:
+      MYSQL_DATABASE: "test"
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "user"
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --explicit-defaults-for-timestamp=ON
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
