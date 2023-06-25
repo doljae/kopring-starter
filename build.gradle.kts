@@ -47,6 +47,8 @@ dependencies {
     implementation(Dependencies.testContainersMySql)
 
     implementation(Dependencies.mySqlConnector)
+
+    implementation(Dependencies.logging)
 }
 
 tasks.withType<KotlinCompile> {

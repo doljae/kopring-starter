@@ -15,4 +15,6 @@ object Dependencies {
     const val testContainersMySql="org.testcontainers:mysql"
 
     const val mySqlConnector="com.mysql:mysql-connector-j"
+
+    const val logging="io.github.oshai:kotlin-logging-jvm:_"
 }
