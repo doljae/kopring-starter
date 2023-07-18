@@ -37,7 +37,9 @@ dependencies {
     implementation(Dependencies.springBootStarterWeb)
     implementation(Dependencies.springBootStarterJpa)
     implementation(Dependencies.springBootStarterActuator)
-    implementation(Dependencies.springBootStarterTest)
+    implementation(Dependencies.springBootStarterTest) {
+        exclude(module = "mockito-core")
+    }
 
     implementation(Dependencies.springBootConfigurationProcessor)
     implementation(Dependencies.springBootTestContainers)
@@ -49,6 +51,10 @@ dependencies {
     implementation(Dependencies.mySqlConnector)
 
     implementation(Dependencies.logging)
+
+    testImplementation(Dependencies.kotestAssertions)
+    testImplementation(Dependencies.mockk)
+    testImplementation(Dependencies.springMockk)
 }
 
 tasks.withType<KotlinCompile> {

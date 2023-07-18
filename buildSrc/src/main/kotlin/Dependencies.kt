@@ -17,4 +17,8 @@ object Dependencies {
     const val mySqlConnector="com.mysql:mysql-connector-j"
 
     const val logging="io.github.oshai:kotlin-logging-jvm:_"
+
+    const val kotestAssertions = "io.kotest:kotest-assertions-core-jvm:_"
+    const val mockk = "io.mockk:mockk:_"
+    const val springMockk = "com.ninja-squad:springmockk:_"
 }
