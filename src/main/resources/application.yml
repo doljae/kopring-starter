@@ -14,3 +14,6 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQLDialect
     open-in-view: false
+  mvc:
+    problemdetails:
+      enabled: true
