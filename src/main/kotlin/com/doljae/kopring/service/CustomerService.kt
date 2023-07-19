@@ -13,7 +13,8 @@ class CustomerService(
 ) {
     fun register(request: CustomerRegistrationRequest): CustomerRegistrationDto {
         val customer = Customer(
-            username = request.username,
+            firstName = request.firstName,
+            lastName = request.lastName,
             gender = request.gender,
             birthDate = request.birthDate,
         )

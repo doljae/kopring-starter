@@ -6,14 +6,16 @@ import java.time.LocalDate
 
 data class CustomerRegistrationResponse(
     val id: Long,
-    val username: String,
+    val firstName: String,
+    val lastName: String,
     val gender: Gender,
     val birthDate: LocalDate,
 ) {
     companion object {
         fun from(dto: CustomerRegistrationDto): CustomerRegistrationResponse = CustomerRegistrationResponse(
             id = dto.id,
-            username = dto.username,
+            firstName = dto.firstName,
+            lastName = dto.firstName,
             gender = dto.gender,
             birthDate = dto.birthDate,
         )
