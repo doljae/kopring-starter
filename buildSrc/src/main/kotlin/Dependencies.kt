@@ -18,6 +18,7 @@ object Dependencies {
 
     const val logging="io.github.oshai:kotlin-logging-jvm:_"
 
+    const val kotestCore = "io.kotest:kotest-runner-junit5-jvm:_"
     const val kotestAssertions = "io.kotest:kotest-assertions-core-jvm:_"
     const val mockk = "io.mockk:mockk:_"
     const val springMockk = "com.ninja-squad:springmockk:_"

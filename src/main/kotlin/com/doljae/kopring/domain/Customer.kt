@@ -29,5 +29,5 @@ class Customer(
         get() = Period.between(birthDate, LocalDate.now()).years
 
     val fullName: String
-        get() = firstName + lastName
+        get() = "$firstName $lastName"
 }

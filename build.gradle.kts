@@ -52,6 +52,7 @@ dependencies {
 
     implementation(Dependencies.logging)
 
+    testImplementation(Dependencies.kotestCore)
     testImplementation(Dependencies.kotestAssertions)
     testImplementation(Dependencies.mockk)
     testImplementation(Dependencies.springMockk)
