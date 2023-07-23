@@ -4,6 +4,7 @@ import com.doljae.kopring.api.request.CustomerRegistrationRequest
 import com.doljae.kopring.domain.Customer
 import com.doljae.kopring.service.dto.CustomerDto
 import com.doljae.kopring.service.dto.CustomerRegistrationDto
+import com.doljae.kopring.util.Logger.Companion.log
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.stereotype.Service
 
@@ -19,7 +20,9 @@ class CustomerService(
             birthDate = request.birthDate,
         )
 
-        return CustomerRegistrationDto.from(customerRepository.save(customer))
+        return CustomerRegistrationDto.from(customerRepository.save(customer)).also {
+            log.info { "Customer Registration, id: $customer.id" }
+        }
     }
 
     fun retrieve(id: Long): CustomerDto {
