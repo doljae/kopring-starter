@@ -40,6 +40,7 @@ dependencies {
     implementation(Dependencies.springBootStarterTest) {
         exclude(module = "mockito-core")
     }
+    developmentOnly(Dependencies.springBootDockerCompose)
 
     implementation(Dependencies.springBootConfigurationProcessor)
     implementation(Dependencies.springBootTestContainers)
