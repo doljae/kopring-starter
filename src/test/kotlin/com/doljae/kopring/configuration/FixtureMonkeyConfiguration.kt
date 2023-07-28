@@ -1,8 +1,5 @@
 package com.doljae.kopring.configuration
 
-import com.fasterxml.jackson.annotation.JsonInclude
-import com.fasterxml.jackson.databind.DeserializationFeature
-import com.fasterxml.jackson.databind.MapperFeature
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule
 import com.fasterxml.jackson.module.kotlin.jacksonMapperBuilder
 import com.navercorp.fixturemonkey.FixtureMonkey
@@ -37,11 +34,8 @@ class FixtureMonkeyConfiguration {
             .plugin(
                 JacksonPlugin(
                     jacksonMapperBuilder()
-                        .configure(MapperFeature.USE_STD_BEAN_NAMING, true)
                         .build()
-                        .registerModule(JavaTimeModule())
-                        .disable(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES)
-                        .setDefaultPropertyInclusion(JsonInclude.Include.NON_NULL),
+                        .registerModule(JavaTimeModule()),
                 ),
             )
             .build()
