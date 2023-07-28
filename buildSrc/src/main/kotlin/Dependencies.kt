@@ -16,12 +16,14 @@ object Dependencies {
     const val testContainersMySql: String = "org.testcontainers:mysql"
 
     const val mySqlConnector: String = "com.mysql:mysql-connector-j"
+    const val h2db: String = "com.h2database:h2:2.2.220"
 
     const val logging: String = "io.github.oshai:kotlin-logging-jvm:_"
 
     const val kotestCore: String = "io.kotest:kotest-runner-junit5-jvm:_"
     const val kotestAssertions: String = "io.kotest:kotest-assertions-core-jvm:_"
     const val kotestExtensionsSpring = "io.kotest.extensions:kotest-extensions-spring:_"
+    const val kotestExtensionsTestContainers = "io.kotest.extensions:kotest-extensions-testcontainers:_"
     const val mockk: String = "io.mockk:mockk:_"
     const val springMockk: String = "com.ninja-squad:springmockk:_"
 

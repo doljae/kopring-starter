@@ -50,12 +50,13 @@ dependencies {
     implementation(Dependencies.testContainersMySql)
 
     implementation(Dependencies.mySqlConnector)
-
+    runtimeOnly(Dependencies.h2db)
     implementation(Dependencies.logging)
 
     testImplementation(Dependencies.kotestCore)
     testImplementation(Dependencies.kotestAssertions)
     testImplementation(Dependencies.kotestExtensionsSpring)
+    testImplementation(Dependencies.kotestExtensionsTestContainers)
     testImplementation(Dependencies.mockk)
     testImplementation(Dependencies.springMockk)
     testImplementation(Dependencies.fixtureMonkeyStarter)
