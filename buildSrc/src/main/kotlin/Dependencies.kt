@@ -21,6 +21,10 @@ object Dependencies {
 
     const val kotestCore: String = "io.kotest:kotest-runner-junit5-jvm:_"
     const val kotestAssertions: String = "io.kotest:kotest-assertions-core-jvm:_"
+    const val kotestExtensionsSpring = "io.kotest.extensions:kotest-extensions-spring:_"
     const val mockk: String = "io.mockk:mockk:_"
     const val springMockk: String = "com.ninja-squad:springmockk:_"
+
+    const val fixtureMonkeyStarter = "com.navercorp.fixturemonkey:fixture-monkey-starter-kotlin:_"
+    const val fixtureMonkeyJackson = "com.navercorp.fixturemonkey:fixture-monkey-jackson:_"
 }

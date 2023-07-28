@@ -55,8 +55,11 @@ dependencies {
 
     testImplementation(Dependencies.kotestCore)
     testImplementation(Dependencies.kotestAssertions)
+    testImplementation(Dependencies.kotestExtensionsSpring)
     testImplementation(Dependencies.mockk)
     testImplementation(Dependencies.springMockk)
+    testImplementation(Dependencies.fixtureMonkeyStarter)
+    testImplementation(Dependencies.fixtureMonkeyJackson)
 }
 
 tasks.withType<KotlinCompile> {

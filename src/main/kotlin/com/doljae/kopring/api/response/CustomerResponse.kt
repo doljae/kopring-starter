@@ -14,7 +14,7 @@ data class CustomerResponse(
     companion object {
         fun from(dto: CustomerDto): CustomerResponse = CustomerResponse(
             id = dto.id,
-            firstName = dto.lastName,
+            firstName = dto.firstName,
             lastName = dto.lastName,
             gender = dto.gender,
             birthDate = dto.birthDate,

@@ -1,5 +1,6 @@
 package com.doljae.kopring.domain
 
+import com.doljae.kopring.api.request.CustomerUpdateRequest
 import jakarta.persistence.Column
 import jakarta.persistence.Entity
 import jakarta.persistence.EnumType
@@ -30,4 +31,11 @@ class Customer(
 
     val fullName: String
         get() = "$firstName $lastName"
+
+    fun update(request: CustomerUpdateRequest) {
+        firstName = request.firstName
+        lastName = request.lastName
+        gender = request.gender
+        birthDate = request.birthDate
+    }
 }
