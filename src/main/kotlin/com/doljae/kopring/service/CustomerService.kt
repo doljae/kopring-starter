@@ -22,9 +22,8 @@ class CustomerService(
             birthDate = request.birthDate,
         )
 
-        return CustomerRegistrationDto.from(customerRepository.save(customer)).also {
-            log.info { "Customer Registration, id: ${customer.id}" }
-        }
+        return CustomerRegistrationDto.from(customerRepository.save(customer))
+            .also { log.info { "Customer Registration, id: ${customer.id}" } }
     }
 
     fun retrieve(id: Long): CustomerDto {
