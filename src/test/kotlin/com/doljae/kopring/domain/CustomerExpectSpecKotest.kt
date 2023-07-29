@@ -21,7 +21,7 @@ internal class CustomerExpectSpecKotest : ExpectSpec() {
                 gender = Gender.MALE,
                 birthDate = LocalDate.now(),
             )
-            expect("customer's fullname is firstname and lastname with a space delimiter") {
+            expect("fullname is the text of firstname and lastname combined with a space delimiter") {
                 val expectedFullName = "${customer.firstName} ${customer.lastName}"
                 customer.fullName shouldBe expectedFullName
             }
