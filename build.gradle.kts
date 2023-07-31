@@ -4,6 +4,7 @@ plugins {
     id("org.springframework.boot")
     id("io.spring.dependency-management")
     kotlin("jvm")
+    kotlin("kapt")
     kotlin("plugin.spring")
     kotlin("plugin.jpa")
 
@@ -42,7 +43,7 @@ dependencies {
     }
     developmentOnly(Dependencies.springBootDockerCompose)
 
-    implementation(Dependencies.springBootConfigurationProcessor)
+    kapt(Dependencies.springBootConfigurationProcessor)
     implementation(Dependencies.springBootTestContainers)
     implementation(Dependencies.springBootDevTools)
 

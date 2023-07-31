@@ -17,3 +17,8 @@ spring:
   mvc:
     problemdetails:
       enabled: true
+
+infcon:
+  location: coex
+  date: 2023-08-15
+  url: https://inflearn.com/conf/infcon-2023
