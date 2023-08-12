@@ -24,42 +24,40 @@ internal class CustomerServiceAnnotationSpecKotest : AnnotationSpec() {
     @InjectMockKs
     lateinit var customerService: CustomerService
 
-    init {
-        @Test
-        fun retrieveWithKotestAssertions() {
-            every { customerRepository.findByIdOrNull(any()) } returns Customer(
-                firstName = "Seokjae",
-                lastName = "Lee",
-                gender = Gender.MALE,
-                birthDate = LocalDate.now(),
-            )
+    @Test
+    fun retrieveWithKotestAssertions() {
+        every { customerRepository.findByIdOrNull(any()) } returns Customer(
+            firstName = "Seokjae",
+            lastName = "Lee",
+            gender = Gender.MALE,
+            birthDate = LocalDate.now(),
+        )
 
-            val result = customerService.retrieve(id)
+        val result = customerService.retrieve(id)
 
-            result.firstName shouldBe firstName
-            result.lastName shouldBe lastName
-            result.gender shouldBe gender
-            result.gender shouldBeIn Gender.entries
-            result.gender shouldNotBe Gender.FEMALE
-            result.birthDate shouldBe birthDate
-        }
+        result.firstName shouldBe firstName
+        result.lastName shouldBe lastName
+        result.gender shouldBe gender
+        result.gender shouldBeIn Gender.entries
+        result.gender shouldNotBe Gender.FEMALE
+        result.birthDate shouldBe birthDate
+    }
 
-        @Test
-        fun retrieveWithTraditionalAssertions() {
-            every { customerRepository.findByIdOrNull(any()) } returns Customer(
-                firstName = "Seokjae",
-                lastName = "Lee",
-                gender = Gender.MALE,
-                birthDate = LocalDate.now(),
-            )
+    @Test
+    fun retrieveWithTraditionalAssertions() {
+        every { customerRepository.findByIdOrNull(any()) } returns Customer(
+            firstName = "Seokjae",
+            lastName = "Lee",
+            gender = Gender.MALE,
+            birthDate = LocalDate.now(),
+        )
 
-            val result = customerService.retrieve(id)
+        val result = customerService.retrieve(id)
 
-            assertEquals(firstName, result.firstName)
-            assertEquals(lastName, result.lastName)
-            assertEquals(gender, result.gender)
-            assertEquals(birthDate, result.birthDate)
-        }
+        assertEquals(firstName, result.firstName)
+        assertEquals(lastName, result.lastName)
+        assertEquals(gender, result.gender)
+        assertEquals(birthDate, result.birthDate)
     }
 
     companion object {

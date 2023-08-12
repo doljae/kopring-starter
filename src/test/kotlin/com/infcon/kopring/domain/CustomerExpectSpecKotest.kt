@@ -14,7 +14,7 @@ internal class CustomerExpectSpecKotest : ExpectSpec() {
             println("${this::class.simpleName} end")
         }
 
-        context("properties") {
+        context("customer") {
             val customer = Customer(
                 firstName = "Seokjae",
                 lastName = "Lee",

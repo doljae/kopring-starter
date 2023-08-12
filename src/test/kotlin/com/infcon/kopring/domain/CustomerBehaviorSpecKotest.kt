@@ -21,9 +21,9 @@ internal class CustomerBehaviorSpecKotest : BehaviorSpec() {
                 gender = Gender.MALE,
                 birthDate = LocalDate.now(),
             )
-            When("customer's fullname is firstname and lastname with a space delimiter") {
+            When("fullname") {
                 val fullName = "${customer.firstName} ${customer.lastName}"
-                Then("same") {
+                Then("is the text of firstname and lastname combined with a space delimiter") {
                     customer.fullName shouldBe fullName
                 }
             }

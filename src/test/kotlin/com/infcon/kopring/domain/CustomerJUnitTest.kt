@@ -19,7 +19,7 @@ internal class CustomerJUnitTest {
     }
 
     @Test
-    fun `customer's fullname is firstname and lastname with a space delimiter`() {
+    fun `fullname is the text of firstname and lastname combined with a space delimiter`() {
         val customer = Customer(
             firstName = "Seokjae",
             lastName = "Lee",

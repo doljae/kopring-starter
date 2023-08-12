@@ -11,7 +11,7 @@ plugins {
     id("org.jlleitschuh.gradle.ktlint")
 }
 
-group = "com.doljae"
+group = "com.infcon"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
