@@ -26,7 +26,7 @@ class TestController(
     fun testApiV3(): ResponseEntity<String> = ResponseEntity.ok(testService.greeting())
 
     @GetMapping("/test/infcon")
-    fun testInfcon(): ResponseEntity<InfconProperties> {
+    fun testConfigurationProperties(): ResponseEntity<InfconProperties> {
         return ResponseEntity.ok(properties)
     }
 }

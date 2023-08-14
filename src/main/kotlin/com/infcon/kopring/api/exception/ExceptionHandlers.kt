@@ -12,6 +12,7 @@ class ExceptionHandlers {
     @ExceptionHandler
     fun handleRuntimeException(exception: RuntimeException): ProblemDetail {
         log.error { "message: ${exception.message}, cause: ${exception.cause}" }
+
         return ProblemDetail.forStatusAndDetail(HttpStatus.INTERNAL_SERVER_ERROR, "Something was wrong")
     }
 }
