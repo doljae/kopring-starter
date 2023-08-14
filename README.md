@@ -21,6 +21,6 @@
 
 ## 적용 플러그인 및 기타 의존성
 
-- refreshVersions
-- ktlint-gradle
-- Fixture Monkey
+- [refreshVersions](https://github.com/Splitties/refreshVersions)
+- [ktlint-gradle](https://github.com/JLLeitschuh/ktlint-gradle)
+- [Fixture Monkey](https://github.com/naver/fixture-monkey)
