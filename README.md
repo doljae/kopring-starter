@@ -31,7 +31,7 @@
 ## 링크 모음
 
 - [발표 소개](https://www.inflearn.com/conf/infcon-2023/session-detail?id=765)
-- [발표 자료](https://www.slideshare.net/SeokjaeLee11/2023v6pdf)
+- [발표 자료](https://www.slideshare.net/SeokjaeLee11/2023v6pdf-260129735)
 - [발표 후기 1(참가자 Ver.)](https://doljae.tistory.com/320)
 - [발표 후기 2(발표자 Ver.)](https://doljae.tistory.com/321)
 
