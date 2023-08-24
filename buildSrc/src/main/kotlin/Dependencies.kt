@@ -16,7 +16,7 @@ object Dependencies {
     const val testContainersMySql: String = "org.testcontainers:mysql"
 
     const val mySqlConnector: String = "com.mysql:mysql-connector-j"
-    const val h2db: String = "com.h2database:h2:2.2.220"
+    const val h2db: String = "com.h2database:h2:_"
 
     const val logging: String = "io.github.oshai:kotlin-logging-jvm:_"
 
