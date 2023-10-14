@@ -17,6 +17,10 @@ spring:
   mvc:
     problemdetails:
       enabled: true
+  docker:
+    compose:
+      file: ./docker/docker-compose.yml
+      lifecycle-management: start_and_stop
 
 infcon:
   location: coex
