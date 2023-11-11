@@ -21,6 +21,9 @@ spring:
     compose:
       file: ./docker/docker-compose.yml
       lifecycle-management: start_and_stop
+      # Temporarily disable due to a bug, will be fixed in Boot 3.1.6 or 3.2.0
+      # https://github.com/spring-projects/spring-boot/issues/37982
+      enabled: false
 
 infcon:
   location: coex
