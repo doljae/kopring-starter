@@ -5,7 +5,8 @@ import com.fasterxml.jackson.module.kotlin.jacksonMapperBuilder
 import com.navercorp.fixturemonkey.FixtureMonkey
 import com.navercorp.fixturemonkey.api.generator.ArbitraryContainerInfo
 import com.navercorp.fixturemonkey.api.generator.DefaultNullInjectGenerator
-import com.navercorp.fixturemonkey.api.introspector.JavaTypeArbitraryGenerator
+import com.navercorp.fixturemonkey.api.jqwik.JavaTypeArbitraryGenerator
+import com.navercorp.fixturemonkey.api.jqwik.JqwikPlugin
 import com.navercorp.fixturemonkey.jackson.plugin.JacksonPlugin
 import com.navercorp.fixturemonkey.kotlin.KotlinPlugin
 import net.jqwik.api.arbitraries.BigDecimalArbitrary
@@ -20,17 +21,19 @@ class FixtureMonkeyConfiguration {
         val sut: FixtureMonkey = FixtureMonkey.builder().plugin(KotlinPlugin())
             .defaultArbitraryContainerInfoGenerator { ArbitraryContainerInfo(MIN_SIZE, MAX_SIZE) }
             .defaultNullInjectGenerator { DefaultNullInjectGenerator.NOT_NULL_INJECT }
-            .javaTypeArbitraryGenerator(
-                object : JavaTypeArbitraryGenerator {
-                    override fun strings(): StringArbitrary {
-                        return DefaultStringArbitrary().alpha().ofMinLength(10).ofMaxLength(20)
-                    }
+            .plugin {
+                JqwikPlugin().javaTypeArbitraryGenerator(
+                    object : JavaTypeArbitraryGenerator {
+                        override fun strings(): StringArbitrary {
+                            return DefaultStringArbitrary().alpha().ofMinLength(10).ofMaxLength(20)
+                        }
 
-                    override fun bigDecimals(): BigDecimalArbitrary {
-                        return DefaultBigDecimalArbitrary().between(BigDecimal(10), BigDecimal(1000))
-                    }
-                },
-            )
+                        override fun bigDecimals(): BigDecimalArbitrary {
+                            return DefaultBigDecimalArbitrary().between(BigDecimal(10), BigDecimal(1000))
+                        }
+                    },
+                )
+            }
             .plugin(
                 JacksonPlugin(
                     jacksonMapperBuilder()
