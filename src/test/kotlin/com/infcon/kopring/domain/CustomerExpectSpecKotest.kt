@@ -15,12 +15,13 @@ internal class CustomerExpectSpecKotest : ExpectSpec() {
         }
 
         context("customer") {
-            val customer = Customer(
-                firstName = "Seokjae",
-                lastName = "Lee",
-                gender = Gender.MALE,
-                birthDate = LocalDate.now(),
-            )
+            val customer =
+                Customer(
+                    firstName = "Seokjae",
+                    lastName = "Lee",
+                    gender = Gender.MALE,
+                    birthDate = LocalDate.now(),
+                )
             expect("fullname is the text of firstname and lastname combined with a space delimiter") {
                 val expectedFullName = "${customer.firstName} ${customer.lastName}"
                 customer.fullName shouldBe expectedFullName
@@ -28,12 +29,13 @@ internal class CustomerExpectSpecKotest : ExpectSpec() {
         }
 
         xcontext("use 'xcontext()' to disable all test cases in the context") {
-            val customer = Customer(
-                firstName = "Seokjae",
-                lastName = "Lee",
-                gender = Gender.MALE,
-                birthDate = LocalDate.now(),
-            )
+            val customer =
+                Customer(
+                    firstName = "Seokjae",
+                    lastName = "Lee",
+                    gender = Gender.MALE,
+                    birthDate = LocalDate.now(),
+                )
             expect("fullname is the text of firstname and lastname combined with a space delimiter") {
                 val expectedFullName = "${customer.firstName} ${customer.lastName}"
                 customer.fullName shouldBe expectedFullName

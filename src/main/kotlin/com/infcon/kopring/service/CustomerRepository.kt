@@ -7,5 +7,6 @@ import java.util.Optional
 
 interface CustomerRepository : JpaRepository<Customer, Long> {
     fun findByGender(gender: Gender): Customer?
+
     fun findByFirstName(firstName: String): Optional<Customer>
 }

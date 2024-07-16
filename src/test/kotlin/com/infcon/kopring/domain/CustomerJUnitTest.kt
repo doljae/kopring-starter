@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test
 import java.time.LocalDate
 
 internal class CustomerJUnitTest {
-
     @BeforeEach
     fun before() {
         println("${this::class.simpleName} start")
@@ -20,12 +19,13 @@ internal class CustomerJUnitTest {
 
     @Test
     fun `fullname is the text of firstname and lastname combined with a space delimiter`() {
-        val customer = Customer(
-            firstName = "Seokjae",
-            lastName = "Lee",
-            gender = Gender.MALE,
-            birthDate = LocalDate.now(),
-        )
+        val customer =
+            Customer(
+                firstName = "Seokjae",
+                lastName = "Lee",
+                gender = Gender.MALE,
+                birthDate = LocalDate.now(),
+            )
         val expectedFullName = "${customer.firstName} ${customer.lastName}"
 
         assertEquals(expectedFullName, customer.fullName)

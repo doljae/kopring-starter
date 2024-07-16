@@ -12,12 +12,13 @@ data class CustomerRegistrationDto(
     val birthDate: LocalDate,
 ) {
     companion object {
-        fun from(entity: Customer): CustomerRegistrationDto = CustomerRegistrationDto(
-            id = entity.id,
-            firstName = entity.firstName,
-            lastName = entity.lastName,
-            gender = entity.gender,
-            birthDate = entity.birthDate,
-        )
+        fun from(entity: Customer): CustomerRegistrationDto =
+            CustomerRegistrationDto(
+                id = entity.id,
+                firstName = entity.firstName,
+                lastName = entity.lastName,
+                gender = entity.gender,
+                birthDate = entity.birthDate,
+            )
     }
 }

@@ -17,7 +17,6 @@ import java.time.LocalDate
 
 @ExtendWith(MockKExtension::class)
 internal class CustomerServiceAnnotationSpecKotest : AnnotationSpec() {
-
     @MockK
     lateinit var customerRepository: CustomerRepository
 
@@ -26,17 +25,18 @@ internal class CustomerServiceAnnotationSpecKotest : AnnotationSpec() {
 
     @Test
     fun retrieveWithKotestAssertions() {
-        every { customerRepository.findByIdOrNull(any()) } returns Customer(
-            firstName = "Seokjae",
-            lastName = "Lee",
-            gender = Gender.MALE,
-            birthDate = LocalDate.now(),
-        )
+        every { customerRepository.findByIdOrNull(any()) } returns
+            Customer(
+                firstName = "Seokjae",
+                lastName = "Lee",
+                gender = Gender.MALE,
+                birthDate = LocalDate.now(),
+            )
 
-        val result = customerService.retrieve(id)
+        val result = customerService.retrieve(ID)
 
-        result.firstName shouldBe firstName
-        result.lastName shouldBe lastName
+        result.firstName shouldBe FIRSTNAME
+        result.lastName shouldBe LASTNAME
         result.gender shouldBe gender
         result.gender shouldBeIn Gender.entries
         result.gender shouldNotBe Gender.FEMALE
@@ -45,25 +45,26 @@ internal class CustomerServiceAnnotationSpecKotest : AnnotationSpec() {
 
     @Test
     fun retrieveWithTraditionalAssertions() {
-        every { customerRepository.findByIdOrNull(any()) } returns Customer(
-            firstName = "Seokjae",
-            lastName = "Lee",
-            gender = Gender.MALE,
-            birthDate = LocalDate.now(),
-        )
+        every { customerRepository.findByIdOrNull(any()) } returns
+            Customer(
+                firstName = "Seokjae",
+                lastName = "Lee",
+                gender = Gender.MALE,
+                birthDate = LocalDate.now(),
+            )
 
-        val result = customerService.retrieve(id)
+        val result = customerService.retrieve(ID)
 
-        assertEquals(firstName, result.firstName)
-        assertEquals(lastName, result.lastName)
+        assertEquals(FIRSTNAME, result.firstName)
+        assertEquals(LASTNAME, result.lastName)
         assertEquals(gender, result.gender)
         assertEquals(birthDate, result.birthDate)
     }
 
     companion object {
-        private const val id = 1L
-        private const val firstName = "Seokjae"
-        private const val lastName = "Lee"
+        private const val ID = 1L
+        private const val FIRSTNAME = "Seokjae"
+        private const val LASTNAME = "Lee"
         private val gender = Gender.MALE
         private val birthDate = LocalDate.now()
     }

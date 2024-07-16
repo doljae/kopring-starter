@@ -17,17 +17,19 @@ import org.springframework.web.bind.annotation.RestController
 class CustomerController(
     private val customerService: CustomerService,
 ) {
-
     @PostMapping("/customers")
-    fun register(@RequestBody request: CustomerRegistrationRequest): ResponseEntity<CustomerRegistrationResponse> {
+    fun register(
+        @RequestBody request: CustomerRegistrationRequest,
+    ): ResponseEntity<CustomerRegistrationResponse> {
         val customerRegistration = customerService.register(request)
 
         return ResponseEntity.ok().body(CustomerRegistrationResponse.from(customerRegistration))
     }
 
     @GetMapping("/customers/{id}")
-    fun retrieve(@PathVariable id: Long): ResponseEntity<CustomerResponse> =
-        ResponseEntity.ok().body(CustomerResponse.from(customerService.retrieve(id)))
+    fun retrieve(
+        @PathVariable id: Long,
+    ): ResponseEntity<CustomerResponse> = ResponseEntity.ok().body(CustomerResponse.from(customerService.retrieve(id)))
 
     @PutMapping("/customers/{id}")
     fun update(

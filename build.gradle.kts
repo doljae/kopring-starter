@@ -1,4 +1,5 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 
 plugins {
     id("org.springframework.boot")
@@ -13,7 +14,7 @@ plugins {
 
 group = "com.infcon"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_17
+java.sourceCompatibility = JavaVersion.VERSION_21
 
 configurations {
     compileOnly {
@@ -64,13 +65,12 @@ dependencies {
     testImplementation(Dependencies.fixtureMonkeyJackson)
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions {
-        freeCompilerArgs = listOf("-Xjsr305=strict")
-        jvmTarget = "17"
+tasks.named("compileKotlin", KotlinCompilationTask::class.java) {
+    compilerOptions {
+        freeCompilerArgs.add("-Xjsr305=strict")
+        apiVersion.set(KotlinVersion.KOTLIN_2_0)
     }
 }
-
 tasks.withType<Test> {
     useJUnitPlatform()
 }

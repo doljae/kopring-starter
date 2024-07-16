@@ -5,9 +5,7 @@ import org.springframework.test.context.DynamicPropertySource
 import org.testcontainers.containers.MySQLContainer
 
 interface WithTestContainers {
-
     companion object {
-
         @JvmStatic
         @DynamicPropertySource
         fun initTestContainers(registry: DynamicPropertyRegistry) {

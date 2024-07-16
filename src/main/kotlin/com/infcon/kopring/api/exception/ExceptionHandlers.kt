@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice
 
 @RestControllerAdvice
 class ExceptionHandlers {
-
     @ExceptionHandler
     fun handleRuntimeException(exception: RuntimeException): ProblemDetail {
         log.error { "message: ${exception.message}, cause: ${exception.cause}" }

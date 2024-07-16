@@ -15,12 +15,13 @@ internal class CustomerBehaviorSpecKotest : BehaviorSpec() {
         }
 
         Given("customer") {
-            val customer = Customer(
-                firstName = "Seokjae",
-                lastName = "Lee",
-                gender = Gender.MALE,
-                birthDate = LocalDate.now(),
-            )
+            val customer =
+                Customer(
+                    firstName = "Seokjae",
+                    lastName = "Lee",
+                    gender = Gender.MALE,
+                    birthDate = LocalDate.now(),
+                )
             When("fullname") {
                 val fullName = "${customer.firstName} ${customer.lastName}"
                 Then("is the text of firstname and lastname combined with a space delimiter") {
@@ -30,12 +31,13 @@ internal class CustomerBehaviorSpecKotest : BehaviorSpec() {
         }
 
         xGiven("use 'xGiven' to disable all test cases in the Given block") {
-            val customer = Customer(
-                firstName = "Seokjae",
-                lastName = "Lee",
-                gender = Gender.MALE,
-                birthDate = LocalDate.now(),
-            )
+            val customer =
+                Customer(
+                    firstName = "Seokjae",
+                    lastName = "Lee",
+                    gender = Gender.MALE,
+                    birthDate = LocalDate.now(),
+                )
             When("fullname") {
                 val fullName = "${customer.firstName} ${customer.lastName}"
                 Then("is the text of firstname and lastname combined with a space delimiter") {

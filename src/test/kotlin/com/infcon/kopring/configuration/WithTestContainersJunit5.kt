@@ -7,7 +7,6 @@ import org.testcontainers.junit.jupiter.Testcontainers
 
 @Testcontainers
 open class WithTestContainersJunit5 {
-
     companion object {
         @JvmStatic
         @Container
