@@ -1,5 +1,10 @@
 # kopring-starter
 
+## 24.07.16. 
+
+Spring Boot 3.3.1, Kotlin 2.0 등 프로젝트에서 사용하는 의존성 버전을 최신화했습니다.
+- [커밋 링크](https://github.com/doljae/kopring-starter/commit/93ae808309cd098e864682e3609a91a101ffdf8a)
+
 ## 요약
 
 인프콘 2023에서 발표한 [코프링 프로젝트 투입 일주일 전: 주니어 개발자의 코틀린 도입 이야기](https://www.inflearn.com/conf/infcon-2023/session-detail?id=765)에서 공유 드린 코프링 샘플 프로젝트입니다.
