@@ -17,7 +17,9 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers
 
 @SpringBootTest
 @AutoConfigureMockMvc
-internal class CustomerControllerExpectSpecSpringBootTest : ExpectSpec(), WithTestContainers {
+internal class CustomerControllerExpectSpecSpringBootTest :
+    ExpectSpec(),
+    WithTestContainers {
     @MockkBean
     private lateinit var customerService: CustomerService
 
@@ -31,7 +33,8 @@ internal class CustomerControllerExpectSpecSpringBootTest : ExpectSpec(), WithTe
             val customer = sut.giveMeOne<CustomerDto>()
             every { customerService.retrieve(any()) } returns customer
 
-            mockMvc.get(uri)
+            mockMvc
+                .get(uri)
                 .andExpect { status { isOk() } }
                 .andExpectAll {
                     status { isOk() }
@@ -39,8 +42,7 @@ internal class CustomerControllerExpectSpecSpringBootTest : ExpectSpec(), WithTe
                     MockMvcResultMatchers.jsonPath("$.lastName").value(customer.lastName)
                     MockMvcResultMatchers.jsonPath("$.gender").value(customer.gender)
                     MockMvcResultMatchers.jsonPath("$.birthDate").value(customer.birthDate)
-                }
-                .andDo { print() }
+                }.andDo { print() }
         }
     }
 }

@@ -14,20 +14,19 @@ class FixtureMonkeyConfiguration {
         private const val MAX_SIZE = 3
 
         val sut: FixtureMonkey =
-            FixtureMonkey.builder()
+            FixtureMonkey
+                .builder()
                 .plugin(
                     SimpleValueJqwikPlugin()
                         .minContainerSize(MIN_SIZE)
                         .maxContainerSize(MAX_SIZE),
-                )
-                .plugin(KotlinPlugin())
+                ).plugin(KotlinPlugin())
                 .plugin(
                     JacksonPlugin(
                         jacksonObjectMapper()
                             .registerModule(JavaTimeModule()),
                     ),
-                )
-                .defaultNullInjectGenerator { DefaultNullInjectGenerator.NOT_NULL_INJECT }
+                ).defaultNullInjectGenerator { DefaultNullInjectGenerator.NOT_NULL_INJECT }
                 .build()
     }
 }

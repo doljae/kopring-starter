@@ -12,9 +12,7 @@ class TestController(
     private val properties: InfconProperties,
 ) {
     @GetMapping("/test/v1")
-    fun testApiV1(): ResponseEntity<String> {
-        return ResponseEntity.ok(testService.greeting())
-    }
+    fun testApiV1(): ResponseEntity<String> = ResponseEntity.ok(testService.greeting())
 
     @GetMapping("/test/v2")
     fun testApiV2(): ResponseEntity<String> =
@@ -26,7 +24,5 @@ class TestController(
     fun testApiV3(): ResponseEntity<String> = ResponseEntity.ok(testService.greeting())
 
     @GetMapping("/test/infcon")
-    fun testConfigurationProperties(): ResponseEntity<InfconProperties> {
-        return ResponseEntity.ok(properties)
-    }
+    fun testConfigurationProperties(): ResponseEntity<InfconProperties> = ResponseEntity.ok(properties)
 }

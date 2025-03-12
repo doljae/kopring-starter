@@ -1,13 +1,22 @@
 # kopring-starter
 
-## 24.07.16. 
+## 25.03.12
+
+Spring Boot 3.4.3, Kotlin 2.1 등 프로젝트에서 사용하는 의존성 버전을 최신화했습니다.
+
+- [커밋 링크](https://github.com/doljae/kopring-starter/commit/118ab7423ce0f48ca005aeb626222f9b72eead47)
+
+
+## 24.07.16
 
 Spring Boot 3.3.1, Kotlin 2.0 등 프로젝트에서 사용하는 의존성 버전을 최신화했습니다.
+
 - [커밋 링크](https://github.com/doljae/kopring-starter/commit/93ae808309cd098e864682e3609a91a101ffdf8a)
 
 ## 요약
 
-인프콘 2023에서 발표한 [코프링 프로젝트 투입 일주일 전: 주니어 개발자의 코틀린 도입 이야기](https://www.inflearn.com/conf/infcon-2023/session-detail?id=765)에서 공유 드린 코프링 샘플 프로젝트입니다.
+인프콘 2023에서 발표한 [코프링 프로젝트 투입 일주일 전: 주니어 개발자의 코틀린 도입 이야기](https://www.inflearn.com/conf/infcon-2023/session-detail?id=765)
+에서 공유 드린 코프링 샘플 프로젝트입니다.
 
 [발표 자료](https://www.slideshare.net/SeokjaeLee11/ss-260040875)에 첨부한 샘플 코드와 소개 드린 여러 가지 플러그인이 적용되어 있습니다.
 
@@ -19,8 +28,8 @@ Spring Boot 3.3.1, Kotlin 2.0 등 프로젝트에서 사용하는 의존성 버�
 
 ## 주요 기술 스택
 
-- [Kotlin 1.9](https://github.com/JetBrains/kotlin)
-- [Spring Boot 3.1](https://github.com/spring-projects/spring-boot)
+- [Kotlin 2.1](https://github.com/JetBrains/kotlin)
+- [Spring Boot 3.4](https://github.com/spring-projects/spring-boot)
 - [Spring MVC](https://github.com/spring-projects/spring-framework)
 - [Spring Data JPA](https://github.com/spring-projects/spring-data-jpa)
 - [Testcontainers](https://github.com/testcontainers/testcontainers-java)

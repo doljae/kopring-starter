@@ -1,5 +1,6 @@
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
+import org.jlleitschuh.gradle.ktlint.KtlintExtension
 
 plugins {
     id("org.springframework.boot")
@@ -71,6 +72,12 @@ tasks.named("compileKotlin", KotlinCompilationTask::class.java) {
         apiVersion.set(KotlinVersion.KOTLIN_2_0)
     }
 }
+
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+// See https://github.com/JLLeitschuh/ktlint-gradle/issues/815
+configure<KtlintExtension> {
+    version.set("1.5.0")
 }
