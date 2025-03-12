@@ -5,12 +5,11 @@ import org.jlleitschuh.gradle.ktlint.KtlintExtension
 plugins {
     id("org.springframework.boot")
     id("io.spring.dependency-management")
+    id("org.jlleitschuh.gradle.ktlint")
     kotlin("jvm")
     kotlin("kapt")
     kotlin("plugin.spring")
     kotlin("plugin.jpa")
-
-    id("org.jlleitschuh.gradle.ktlint")
 }
 
 group = "com.infcon"
@@ -69,7 +68,7 @@ dependencies {
 tasks.named("compileKotlin", KotlinCompilationTask::class.java) {
     compilerOptions {
         freeCompilerArgs.add("-Xjsr305=strict")
-        apiVersion.set(KotlinVersion.KOTLIN_2_0)
+        apiVersion.set(KotlinVersion.KOTLIN_2_1)
     }
 }
 
