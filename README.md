@@ -4,7 +4,7 @@
 
 Spring Boot 3.4.3, Kotlin 2.1 등 프로젝트에서 사용하는 의존성 버전을 최신화했습니다.
 
-- [커밋 링크](https://github.com/doljae/kopring-starter/commit/118ab7423ce0f48ca005aeb626222f9b72eead47)
+- [커밋 링크](https://github.com/doljae/kopring-starter/commit/04a9390cdeb974a7e051f1d2f024a9f46fe6e98c)
 
 
 ## 24.07.16
@@ -28,8 +28,8 @@ Spring Boot 3.3.1, Kotlin 2.0 등 프로젝트에서 사용하는 의존성 버�
 
 ## 주요 기술 스택
 
-- [Kotlin 2.1](https://github.com/JetBrains/kotlin)
-- [Spring Boot 3.4](https://github.com/spring-projects/spring-boot)
+- [Kotlin](https://github.com/JetBrains/kotlin)
+- [Spring Boot](https://github.com/spring-projects/spring-boot)
 - [Spring MVC](https://github.com/spring-projects/spring-framework)
 - [Spring Data JPA](https://github.com/spring-projects/spring-data-jpa)
 - [Testcontainers](https://github.com/testcontainers/testcontainers-java)
